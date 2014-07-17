@@ -1,0 +1,37 @@
+.1.2 :004 > Institution::Base.all
+  Institution::Base Load (0.4ms)  SELECT `institution_bases`.* FROM `institution_bases`
+ => #<ActiveRecord::Relation [#<Institution::Commercial id: 3, name: "loremipsum", type: "2", created_at: "2014-07-17 12:27:26", updated_at: "2014-07-17 12:27:26">]>
+2.1.2 :005 > Institution::Commercial.all
+NoMethodError: undefined method `index' for nil:NilClass
+               from /Users/gaurabpaul/Workspace/sample/app/models/concerns/optimally_inheritable.rb:24:in `sti_name'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activerecord-4.1.4/lib/active_record/inheritance.rb:170:in `block in type_condition'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activerecord-4.1.4/lib/active_record/inheritance.rb:170:in `map'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activerecord-4.1.4/lib/active_record/inheritance.rb:170:in `type_condition'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activerecord-4.1.4/lib/active_record/core.rb:170:in `relation'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activerecord-4.1.4/lib/active_record/scoping/named.rb:33:in `default_scoped'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activerecord-4.1.4/lib/active_record/scoping/named.rb:28:in `all'
+               from (irb):5
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/railties-4.1.4/lib/rails/commands/console.rb:90:in `start'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/railties-4.1.4/lib/rails/commands/console.rb:9:in `start'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/railties-4.1.4/lib/rails/commands/commands_tasks.rb:69:in `console'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/railties-4.1.4/lib/rails/commands/commands_tasks.rb:40:in `run_command!'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/railties-4.1.4/lib/rails/commands.rb:17:in `<top (required)>'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `require'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:247:in `block in require'
+               from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:232:in `load_dependency'
+... 2 levels...
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:241:in `load'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:241:in `block in load'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:232:in `load_dependency'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/activesupport-4.1.4/lib/active_support/dependencies.rb:241:in `load'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/commands/rails.rb:6:in `call'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/command_wrapper.rb:38:in `call'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application.rb:180:in `block in serve'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application.rb:153:in `fork'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application.rb:153:in `serve'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application.rb:128:in `block in run'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application.rb:122:in `loop'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application.rb:122:in `run'
+    from /Users/gaurabpaul/.rvm/gems/ruby-2.1.2@sample/gems/spring-1.1.3/lib/spring/application/boot.rb:18:in `<top (required)>'
+    from /Users/gaurabpaul/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+    from /Users/gaurabpaul/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/rubygems/core_ext/kernel_require.rb:55:in `require'
