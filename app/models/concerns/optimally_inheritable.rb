@@ -9,7 +9,11 @@ module OptimallyInheritable
 
     # TODO child class support
     def sti_cls_list
-      @sti_cls_list
+      if superclass.respond_to? :sti_cls_list
+        superclass.sti_cls_list
+      else
+        @sti_cls_list
+      end
     end
 
     def find_sti_class type_name
